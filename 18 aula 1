@@ -1,0 +1,33 @@
+def calcular_cliques_primeiro_link(t):
+  """
+  Calcula o número de cliques no primeiro link com base no número de cliques
+  no terceiro link, seguindo a relação descrita no problema.
+
+  Parâmetros:
+  t (int): Número de pessoas que clicaram no terceiro link.
+
+  Retorno:
+  int: Número de pessoas que clicaram no primeiro link.
+  """
+  # O número de cliques no primeiro link é 4 vezes o número de cliques no terceiro link
+  p = 4 * t
+  return p
+
+def main():
+  """
+  Função principal que interage com o usuário, lê a entrada e exibe o resultado.
+  """
+  # Lê o número de pessoas que clicaram no terceiro link
+  t = int(input("Digite o número de pessoas que clicaram no terceiro link (1 ≤ t ≤ 1000): "))
+
+  # Verifica se o valor de t está dentro do intervalo permitido
+  if 1 <= t <= 1000:
+      # Calcula o número de cliques no primeiro link
+      resultado = calcular_cliques_primeiro_link(t)
+      # Exibe o resultado
+      print(f"O número de pessoas que clicaram no primeiro link é: {resultado}")
+  else:
+      # Mensagem de erro caso o valor de t esteja fora do intervalo
+      print("Erro: O número de pessoas que clicaram no terceiro link deve estar entre 1 e 1000.")
+if __name__ == "__main__":
+   main()
